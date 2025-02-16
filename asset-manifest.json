@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/elevenlabs/static/css/main.3510f13f.css",
+    "main.js": "/elevenlabs/static/js/main.790bd130.js",
+    "index.html": "/elevenlabs/index.html",
+    "main.3510f13f.css.map": "/elevenlabs/static/css/main.3510f13f.css.map",
+    "main.790bd130.js.map": "/elevenlabs/static/js/main.790bd130.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3510f13f.css",
+    "static/js/main.790bd130.js"
+  ]
+}
