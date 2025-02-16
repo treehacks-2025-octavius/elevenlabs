@@ -1,0 +1,13 @@
+.conversation-wrapper {
+    align-items: center;
+}
+
+.conversation-wrapper button {
+    font-size: 2em;
+    color: rgb(18, 16, 15);
+    background-color: rgb(248, 82, 41);
+}
+
+button.connected {
+    background-color: rgb(248, 206, 41);
+}

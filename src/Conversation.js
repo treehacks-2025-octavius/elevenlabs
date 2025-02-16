@@ -3,6 +3,8 @@
 import { useConversation } from '@11labs/react';
 import { useCallback } from 'react';
 
+import './Conversation.css';
+
 // agent is public so don't need api key
 // https://elevenlabs.io/docs/conversational-ai/guides/quickstarts/next-js
 const ELEVEN_LABS_API_KEY = process.env.REACT_APP_ELEVEN_LABS_KEY;
@@ -42,23 +44,21 @@ export function Conversation() {
   }, [conversation]);
 
   return (
-    <div className="flex flex-col items-center gap-4">
-      <div className="flex gap-2">
-        <button
-          onClick={startConversation}
-          disabled={conversation.status === 'connected'}
-          className="px-4 py-2 bg-blue-500 text-white rounded disabled:bg-gray-300"
-        >
-          Start Conversation
-        </button>
-        <button
-          onClick={stopConversation}
-          disabled={conversation.status !== 'connected'}
-          className="px-4 py-2 bg-red-500 text-white rounded disabled:bg-gray-300"
-        >
-          Stop Conversation
-        </button>
-      </div>
+    <div className="conversation-wrapper">
+      <button
+        className={conversation.status === 'connected' ? 'connected' : 'disconnected'}
+        onClick={
+          conversation.status === 'connected'
+            ? stopConversation
+            : startConversation
+        }
+      >
+        {
+          conversation.status === 'connected'
+            ? 'End Call'
+            : 'Request Assistance'
+        }
+      </button>
 
       <div className="flex flex-col items-center">
         <p>Status: {conversation.status}</p>
